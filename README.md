@@ -63,3 +63,11 @@ $stagiaire->modules()
 ```
 * note : Column in the pivot table
 
+# Delete from Intermediate Table
+
+```php
+$stagiaire = Stagiaire::find($request->stagiaire)
+$stagiaire->modules()
+        ->detach($request->module)
+```
+* If you want to detach all items, you must keep detach's args blank
