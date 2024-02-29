@@ -39,6 +39,19 @@ foreach ($stagiaires->modules as $module) :
 endforeach;
 ```
 
+## Method 3 
+After adding withPivot() method within models
+
+```php
+$stagiaires = Stagiaire::with("modules")-get();
+
+foreach($stagiaires as $stagiaire):
+  foreach ($stagiaire->modules as $module) :
+                echo $module->name . ' : ' . $module->pivot->note . "<br>";
+  endforeach;
+endforeach;
+
+```
 # Insert in Intermediate Table
 
 ## Method 1
