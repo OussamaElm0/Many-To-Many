@@ -66,8 +66,8 @@ $stagiaire->modules()
 # Delete from Intermediate Table
 
 ```php
-$stagiaire = Stagiaire::find($request->stagiaire)
+$stagiaire = Stagiaire::find($request->stagiaire);
 $stagiaire->modules()
-        ->detach($request->module)
+        ->detach($request->module);
 ```
 * If you want to detach all items, you must keep detach's args blank
