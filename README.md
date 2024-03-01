@@ -71,3 +71,11 @@ $stagiaire->modules()
         ->detach($request->module);
 ```
 * If you want to detach all items, you must keep detach's args blank
+
+# Update pivot columns
+
+```php
+$stagiaire = Stagiaire:find($request->stagiaire);
+$stagiaire->modules()
+          ->updateExistingPivot($request->module, ['note' => $request->newNote]);
+```
