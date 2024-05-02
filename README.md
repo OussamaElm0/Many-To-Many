@@ -43,7 +43,7 @@ endforeach;
 After adding withPivot() method within models
 
 ```php
-$stagiaires = Stagiaire::with("modules")-get();
+$stagiaires = Stagiaire::with("modules")->get();
 
 foreach($stagiaires as $stagiaire):
   foreach ($stagiaire->modules as $module) :
